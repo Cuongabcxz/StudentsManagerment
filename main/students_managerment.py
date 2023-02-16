@@ -69,7 +69,6 @@ class StudentsManager:
         times = repeat(setup=setup_code, stmt=stmt, repeat=3, number=10)
 
         print(f"Algorithm: {algorithm}. Minimum execution time: {min(times)}")
-
     # Hàm sắp xếp danh sach sinh vien theo tên tăng dần
     def sortByName(self):
         self.list_student.sort(key=lambda x: x.get_name(), reverse=False)
@@ -152,5 +151,3 @@ class StudentsManager:
     def get_list_student(self):
         return self.list_student
     
-    def print_Hello():
-        return "Hello world"
