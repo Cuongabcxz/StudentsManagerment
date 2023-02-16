@@ -60,8 +60,15 @@ class StudentsManager:
             print("Sinh vien co ID = {} khong ton tai.".format(my_id))
 
     # Hàm sắp xếp danh sach sinh vien theo ID tăng dần
-    def sortByID(self):
-        self.list_student.sort(key=lambda x: x.get_id(), reverse=False)
+    def run_sorting_algorithm(algorithm, array):
+        setup_code = f"from __main__ import {algorithm}" \
+        if algorithm != "sorted" else ""
+
+        stmt = f"{algorithm}({array})"
+
+        times = repeat(setup=setup_code, stmt=stmt, repeat=3, number=10)
+
+        print(f"Algorithm: {algorithm}. Minimum execution time: {min(times)}")
 
     # Hàm sắp xếp danh sach sinh vien theo tên tăng dần
     def sortByName(self):
