@@ -16,6 +16,7 @@ if __name__ == '__main__':
         print("**  8. Hien thi danh sach sinh vien.                 **")
         print("**  0. Thoat                                         **")
         print("*******************************************************")
+        print("Hello world")
 
         key = int(input("Nhap tuy chon: "))
         if key == 1:
