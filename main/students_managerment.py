@@ -144,3 +144,6 @@ class StudentsManager:
 
     def get_list_student(self):
         return self.list_student
+    
+    def print_Hello():
+        return "Hello world"
