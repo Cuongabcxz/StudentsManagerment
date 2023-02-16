@@ -60,8 +60,20 @@ class StudentsManager:
             print("Sinh vien co ID = {} khong ton tai.".format(my_id))
 
     # Hàm sắp xếp danh sach sinh vien theo ID tăng dần
-    def sortByID(self):
-        self.list_student.sort(key=lambda x: x.get_id(), reverse=False)
+    def sortByID(array, size):
+      for step in range(size):
+        min_idx = step
+
+        for i in range(step + 1, size):
+         
+            # to sort in descending order, change > to < in this line
+            # select the minimum element in each loop
+            if array[i] < array[min_idx]:
+                min_idx = i
+         
+        # put min at the correct position
+        (array[step], array[min_idx]) = (array[min_idx], array[step])
+
 
     # Hàm sắp xếp danh sach sinh vien theo tên tăng dần
     def sortByName(self):
@@ -145,5 +157,3 @@ class StudentsManager:
     def get_list_student(self):
         return self.list_student
     
-    def print_Hello():
-        return "Hello world"
